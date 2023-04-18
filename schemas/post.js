@@ -1,10 +1,12 @@
 const mongoose = require("mongoose");
 
 const postSchema = new mongoose.Schema({
-  user: {
-    type: String,
+  userId: {
+    type: mongoose.Types.ObjectId,
+    required: true,
+    ref: "User",
   },
-  password: {
+  nickname: {
     type: String,
   },
   title: {
@@ -15,6 +17,6 @@ const postSchema = new mongoose.Schema({
   },
 });
 
-postSchema.set("timestamps", { createdAt: true, updatedAt: false });
+postSchema.set("timestamps", { createdAt: true, updatedAt: true });
 
 module.exports = mongoose.model("Post", postSchema);
