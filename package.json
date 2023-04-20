@@ -4,7 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "node ./utils/swagger.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +13,8 @@
     "cookie-parser": "^1.4.6",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.0.3"
+    "mongoose": "^7.0.3",
+    "swagger-autogen": "^2.23.1"
   },
   "devDependencies": {
     "swagger-jsdoc": "^6.2.8",
